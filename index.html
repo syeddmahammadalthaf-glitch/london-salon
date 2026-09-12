@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>The London Salon | Haute Couture 2090 | Luxury Hair & Aesthetics Anantapur</title>
+  <title>The London Salon | Luxury Hair, Nails, Skin & Bridal Studio | Court Road, Anantapur</title>
   
   <!-- Primary Meta Tags -->
-  <meta name="title" content="The London Salon | Haute Couture 2090 | Anantapur" />
-  <meta name="description" content="The London Salon is a 4.8★ rated premier luxury beauty & hair destination in Rahamat Nagar, Court Road, Anantapur. Experience 2090 haute couture styling, precision cuts, balayage, and aesthetic treatments." />
-  <meta name="keywords" content="The London Salon, London Salon Anantapur, Hair Salon Court Road Anantapur, Best Salon Anantapur, Luxury Salon Anantapur, Bridal Makeup Anantapur, Keratin Treatment Anantapur" />
-  <meta name="theme-color" content="#050507" />
+  <meta name="title" content="The London Salon | Luxury Hair, Nails, Skin & Bridal Studio | Anantapur" />
+  <meta name="description" content="The London Salon is a 4.8★ rated premier luxury salon in Rahamat Nagar, Court Road, Anantapur. Offering British precision haircuts, balayage, keratin hair spa, nail art, luxury facials, and bridal makeovers." />
+  <meta name="keywords" content="The London Salon, London Salon Anantapur, Hair Salon Court Road Anantapur, Best Salon Anantapur, Luxury Unisex Salon Anantapur, Bridal Makeup Anantapur, Nail Art Anantapur" />
+  <meta name="theme-color" content="#07070a" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
@@ -24,35 +24,35 @@
 </head>
 <body>
 
-  <!-- Custom 3D Cursor -->
+  <!-- Custom Luxury Cursor -->
   <div class="custom-cursor">
     <span class="custom-cursor-text"></span>
   </div>
   <div class="custom-cursor-dot"></div>
 
-  <!-- Background WebGL 3D Canvas -->
+  <!-- Background WebGL 3D Canvas (particles & floating ambient salon objects) -->
   <canvas id="webgl-canvas"></canvas>
 
   <!-- Atmosphere Layers -->
   <div class="bg-vignette"></div>
   <div class="bg-noise"></div>
 
-  <!-- 1. OPENING EXPERIENCE GATEWAY -->
-  <div class="experience-portal">
+  <!-- 1. LUXURY WELCOME EXPERIENCE PORTAL -->
+  <div class="experience-portal" id="experience-portal">
     <div class="portal-content">
-      <div class="portal-time-tag">TIMELINE • 2080–2090 DIGITAL MATRIX</div>
+      <div class="portal-time-tag">WELCOME TO ANANTAPUR'S PREMIER LUXURY SALON</div>
       <h1 class="portal-title">THE LONDON SALON</h1>
-      <div class="portal-location">2ND FLOOR • COURT ROAD • ANANTAPUR</div>
-      <div class="portal-tagline">WHERE BRITISH COUTURE MEETS FUTURE AESTHETICS</div>
+      <div class="portal-location">2ND FLOOR • COURT ROAD • OPP. POLICE PETROL PUMP • ANANTAPUR</div>
+      <div class="portal-tagline">WHERE BRITISH ELEGANCE MEETS COUTURE BEAUTY</div>
       <button class="portal-btn-enter" id="btn-enter-experience">
-        <span>ENTER THE EXPERIENCE</span>
+        <span>EXPLORE THE SALON</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
     </div>
   </div>
 
-  <!-- 2. SITE HEADER & NAVIGATION -->
-  <header class="site-header">
+  <!-- 2. SITE HEADER & NAVIGATION (PERFECTLY ALIGNED) -->
+  <header class="site-header" id="site-header">
     <div class="nav-inner">
       <a href="#hero" class="brand-wrap">
         <div class="brand-crest">
@@ -61,48 +61,58 @@
         </div>
         <div class="brand-text">
           <span class="brand-title">THE LONDON SALON</span>
-          <span class="brand-subtitle">ANANTAPUR • 2090</span>
+          <span class="brand-subtitle">COURT ROAD • ANANTAPUR</span>
         </div>
       </a>
 
-      <ul class="nav-links">
-        <li><a href="#hero" class="nav-link">Home</a></li>
-        <li><a href="#mirror" class="nav-link">3D Mirror</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#transformations" class="nav-link">Transformations</a></li>
-        <li><a href="#gallery" class="nav-link">Gallery</a></li>
-        <li><a href="#stylists" class="nav-link">Stylists</a></li>
-        <li><a href="#reviews" class="nav-link">Reviews</a></li>
-        <li><a href="#location" class="nav-link">Location</a></li>
-      </ul>
+      <nav class="nav-menu-wrap">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#consultation" class="nav-link">Lookbook</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#transformations" class="nav-link">Results</a></li>
+          <li><a href="#video-tour" class="nav-link">Video Tour</a></li>
+          <li><a href="#gallery" class="nav-link">Real Gallery</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#location" class="nav-link">Visit Us</a></li>
+        </ul>
+      </nav>
 
       <div class="nav-actions">
         <!-- Ambient Sound Toggle -->
-        <button class="btn-sound" id="btn-sound-toggle" title="Toggle 2090 Ambient Audio" aria-label="Toggle Sound">
+        <button class="btn-sound" id="btn-sound-toggle" title="Toggle Relaxing Salon Lounge Sound" aria-label="Toggle Sound">
           <div class="sound-waves">
             <span class="sound-bar"></span>
             <span class="sound-bar"></span>
             <span class="sound-bar"></span>
             <span class="sound-bar"></span>
           </div>
+          <span class="sound-status-text">LOUNGE AUDIO</span>
         </button>
 
-        <!-- Direct Phone Call -->
-        <a href="tel:08171717579" class="btn-magnetic btn-glass" title="Call The London Salon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>081717 17579</span>
+        <!-- Direct Phone Call Badge (Cleanly Aligned) -->
+        <a href="tel:08171717579" class="header-phone-badge" title="Call The London Salon Anantapur">
+          <svg class="phone-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="phone-text">081717 17579</span>
         </a>
 
         <!-- Book Appointment CTA -->
-        <a href="#booking" class="btn-magnetic btn-gold">
+        <a href="#booking" class="btn-magnetic btn-gold header-book-btn">
           <span>BOOK NOW</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- 3. HERO EXPERIENCE SECTION -->
+  <!-- 3. HERO EXPERIENCE SECTION (FEATURING REAL SALON INTERIOR & BUILDING) -->
   <section class="hero-section" id="hero">
     <div class="container">
       <div class="hero-grid">
@@ -110,21 +120,21 @@
         <div class="hero-content">
           <div class="hero-badge-wrap">
             <span class="hero-badge-dot"></span>
-            <span class="hero-badge-text">4.8★ GOOGLE VERIFIED • ANANTAPUR PREMIER SALON</span>
+            <span class="hero-badge-text">4.8★ GOOGLE VERIFIED • 300+ REVIEWS • ANANTAPUR</span>
           </div>
 
           <h1 class="hero-title">
-            <span class="line-champagne">HAUTE COUTURE</span>
-            <span class="line-outline">BEAUTY 2090</span>
+            <span class="line-champagne">HAUTE COIFFURE &</span>
+            <span class="line-outline">LUXURY AESTHETICS</span>
           </h1>
 
           <p class="hero-description">
-            Step beyond conventional salon care into a living world of precision hair architecture, cellular skin aesthetics, and bespoke styling designed for the year 2090.
+            Experience Anantapur's finest luxury unisex destination. Located on Court Road opposite Police Petrol Pump, we offer bespoke British precision haircuts, luminous French balayage, organic keratin hair spas, haute nail architecture, and royal bridal couture.
           </p>
 
           <div class="hero-ctas">
             <a href="#booking" class="btn-magnetic btn-gold">
-              <span>RESERVE APPOINTMENT</span>
+              <span>RESERVE AN APPOINTMENT</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <a href="#services" class="btn-magnetic btn-glass">
@@ -139,30 +149,58 @@
             </div>
             <div class="hero-stat-item">
               <span class="stat-num">15k+</span>
-              <span class="stat-label">Transformations</span>
+              <span class="stat-label">Clients Styled</span>
             </div>
             <div class="hero-stat-item">
-              <span class="stat-num">2090</span>
-              <span class="stat-label">Haute Standard</span>
+              <span class="stat-num">Court Rd</span>
+              <span class="stat-label">Prime Location</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Luxury Hygiene</span>
             </div>
           </div>
         </div>
 
         <div class="hero-visual-pod">
-          <!-- Real London Salon Interior in 3D Hologram Frame -->
-          <div class="hologram-stage">
-            <img src="assets/real/salon_interior_1.jpg" alt="The London Salon Interior Anantapur" class="hologram-image" />
+          <!-- Real London Salon Showcase Stage with Interactive Views -->
+          <div class="hologram-stage" id="hero-stage">
+            <div class="hologram-view active" id="view-interior">
+              <img src="assets/real/salon_hair_1.jpg" alt="The London Salon Real Interior Styling Stations" class="hologram-image" />
+              <div class="hologram-caption">
+                <div class="caption-tag">REAL VERIFIED INTERIOR • 2ND FLOOR</div>
+                <div class="caption-title">Signature Styling Stations & Backlit Mirrors</div>
+              </div>
+            </div>
+            <div class="hologram-view" id="view-exterior">
+              <img src="assets/real/salon_hair_2.jpg" alt="The London Salon Real Storefront Court Road" class="hologram-image" />
+              <div class="hologram-caption">
+                <div class="caption-tag">REAL STOREFRONT • COURT ROAD</div>
+                <div class="caption-title">The London Salon Grand Entrance</div>
+              </div>
+            </div>
+            <div class="hologram-view" id="view-lounge">
+              <img src="assets/real/salon_interior_3.jpg" alt="The London Salon VIP Reception & Cafe" class="hologram-image" />
+              <div class="hologram-caption">
+                <div class="caption-tag">VIP RECEPTION & CAFÉ LOUNGE</div>
+                <div class="caption-title">By Sana • Luxury Hospitality Suite</div>
+              </div>
+            </div>
+
+            <!-- View Switcher Tabs -->
+            <div class="hero-image-tabs">
+              <button class="hero-tab-btn active" data-view="view-interior">Interior Stations</button>
+              <button class="hero-tab-btn" data-view="view-exterior">Building & Entrance</button>
+              <button class="hero-tab-btn" data-view="view-lounge">Reception & Lounge</button>
+            </div>
+
             <div class="hologram-overlay"></div>
             <div class="hologram-scanline"></div>
-            <div class="hologram-caption">
-              <div class="caption-tag">VERIFIED INTERIOR • 2ND FLOOR</div>
-              <div class="caption-title">The London Salon Anantapur</div>
-            </div>
           </div>
 
-          <!-- 3D Micro-Badges -->
+          <!-- Micro Badges -->
           <div class="floating-badge badge-top-right">
-            <div class="badge-icon">✨</div>
+            <div class="badge-icon">📍</div>
             <div>
               <div class="badge-text">Court Road Hub</div>
               <div class="badge-sub">Opp. Police Petrol Pump</div>
@@ -172,8 +210,8 @@
           <div class="floating-badge badge-bottom-left">
             <div class="badge-icon">👑</div>
             <div>
-              <div class="badge-text">Luxury Unisex Care</div>
-              <div class="badge-sub">Hair • Skin • Bridal</div>
+              <div class="badge-text">Luxury Unisex Studio</div>
+              <div class="badge-sub">Hair • Nails • Skin • Bridal</div>
             </div>
           </div>
         </div>
@@ -182,70 +220,90 @@
     </div>
   </section>
 
-  <!-- 4. FUTURISTIC 3D INTERACTIVE MIRROR SECTION -->
-  <section class="mirror-section" id="mirror">
+  <!-- 4. SIGNATURE STYLING CONSULTATION & VIRTUAL LOOKBOOK -->
+  <section class="mirror-section" id="consultation">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">OPTICAL INTELLIGENCE</span>
-        <h2 class="section-title">The Interactive 3D Styling Mirror</h2>
+        <span class="section-tag">BESPOKE CONSULTATION</span>
+        <h2 class="section-title">Virtual Styling Lookbook</h2>
         <p class="section-desc">
-          Before any cut or color begins, our interactive holographic mirror analyzes your face geometry, skin tone, and hair density in real time.
+          Browse our signature styling concepts, preview genuine salon transformations, and select your ideal aesthetic before settling into the styling chair.
         </p>
       </div>
 
       <div class="mirror-portal-container">
+        
+        <!-- Interactive Mirror Display Frame with Real Salon Photos -->
         <div class="mirror-display-panel">
           <div class="mirror-ring-halo"></div>
-          <div class="mirror-inner-stream">
-            <div class="mirror-hologram-word">YOUR STYLE</div>
-            <div class="mirror-aura-status">OPTICAL SPECTRUM: CHAMPAGNE ACTIVE</div>
+          <div class="mirror-frame-inner">
+            <img src="assets/real/salon_hair_5.jpg" id="lookbook-active-img" alt="Active Lookbook Style" class="lookbook-display-img" />
+            <div class="mirror-hologram-badge" id="lookbook-active-badge">COUTURE BALAYAGE</div>
+            <div class="lookbook-details-overlay">
+              <h4 id="lookbook-title">Sun-Kissed Balayage & Glaze</h4>
+              <p id="lookbook-desc">Hand-painted multidimensional caramel tones with high-gloss diamond sealant for vibrant shine.</p>
+              <div class="lookbook-meta">
+                <span id="lookbook-time">⏱ 120 Mins</span>
+                <span id="lookbook-price">₹2,499+</span>
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Style Selector Menu -->
         <div class="mirror-controls">
-          <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--ivory);">Select Lighting Spectrum</h3>
-          <p style="color: var(--champagne); font-size: 0.92rem;">
-            Toggle the mirror's ambient quantum lighting to inspect your hair tone under varying conditions.
+          <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--ivory);">Select A Signature Look</h3>
+          <p style="color: var(--champagne); font-size: 0.92rem; margin-bottom: 1.5rem;">
+            Click to explore authentic styles crafted by our senior creative stylists in Court Road.
           </p>
 
           <div class="mirror-modes">
-            <button class="mirror-mode-btn active" data-mode="Champagne">
-              <span class="mode-name">✦ Champagne Glow</span>
-              <span class="mode-tone">Warm 3200K Evening Luxury</span>
+            <button class="mirror-mode-btn active" data-style="balayage" data-img="assets/real/salon_hair_5.jpg" data-title="Sun-Kissed Balayage & Glaze" data-desc="Hand-painted multidimensional caramel tones with high-gloss diamond sealant for vibrant shine." data-time="120 Mins" data-price="₹2,499+">
+              <span class="mode-name">✦ Couture Balayage & Glaze</span>
+              <span class="mode-tone">Multidimensional Caramel & Honey Tones</span>
             </button>
-            <button class="mirror-mode-btn" data-mode="Obsidian">
-              <span class="mode-name">✦ Obsidian Noir</span>
-              <span class="mode-tone">High-Contrast Studio Light</span>
+
+            <button class="mirror-mode-btn" data-style="precision" data-img="assets/real/salon_interior_10.jpg" data-title="British Precision Haircut & Styling" data-desc="Personalized face-framing architectural haircut, high-velocity thermal blowout, and textured polish." data-time="60 Mins" data-price="₹799+">
+              <span class="mode-name">✦ Precision Haircut & Blowout</span>
+              <span class="mode-tone">Architectural Face-Framing & Volume</span>
             </button>
-            <button class="mirror-mode-btn" data-mode="Runway">
-              <span class="mode-name">✦ Haute Runway</span>
-              <span class="mode-tone">Volumetric Fashion Beam</span>
+
+            <button class="mirror-mode-btn" data-style="nails" data-img="assets/real/salon_hair_6.jpg" data-title="Swarovski Crystal Gel Nails" data-desc="Deluxe gel extensions with hand-applied crystals, mirror chrome pigments, and high-fashion finish." data-time="60 Mins" data-price="₹899+">
+              <span class="mode-name">✦ Haute Nail Art & Crystals</span>
+              <span class="mode-tone">Sculpted Gel Extensions & Chrome Finish</span>
             </button>
-            <button class="mirror-mode-btn" data-mode="Daylight">
-              <span class="mode-name">✦ Natural Daylight</span>
-              <span class="mode-tone">Pure 5500K True-Color Sun</span>
+
+            <button class="mirror-mode-btn" data-style="bridal" data-img="assets/real/salon_interior_9.jpg" data-title="Royal Bridal Makeover & Trousseau" data-desc="Long-lasting HD airbrush makeup, couture floral hairstyle, and intricate bridal mehendi aesthetics." data-time="240 Mins" data-price="₹6,999+">
+              <span class="mode-name">✦ Royal Bridal Glamour</span>
+              <span class="mode-tone">HD Bridal Makeup & Trousseau Hair Art</span>
+            </button>
+
+            <button class="mirror-mode-btn" data-style="scalp" data-img="assets/real/salon_interior_6.jpg" data-title="Herbal Scalp Spa & Cranial Relief" data-desc="Warm herbal waterfall rinse, deep pressure-point scalp therapy, and stress-relieving shoulder massage." data-time="60 Mins" data-price="₹1,299+">
+              <span class="mode-name">✦ Scalp Spa & Waterfall Rinse</span>
+              <span class="mode-tone">Organic Botanical Infusion & Relaxation</span>
             </button>
           </div>
 
-          <div style="padding-top: 1rem;">
-            <a href="#booking" class="btn-magnetic btn-gold">
-              <span>EXPERIENCE AT SALON</span>
+          <div style="padding-top: 1.25rem;">
+            <a href="#booking" class="btn-magnetic btn-gold" id="btn-book-lookbook-style">
+              <span>BOOK THIS SIGNATURE STYLE</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- 5. SERVICES: 3D EXPERIENTIAL SECTORS -->
+  <!-- 5. SERVICES PORTFOLIO -->
   <section class="services-section" id="services">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">HAUTE SERVICE PORTFOLIO</span>
-        <h2 class="section-title">Futuristic Salon Experiences</h2>
+        <span class="section-tag">OUR EXPERTISE</span>
+        <h2 class="section-title">Luxury Salon Services</h2>
         <p class="section-desc">
-          Every service at The London Salon Anantapur is treated as a bespoke work of art, merging British precision hairdressing with futuristic care regimens.
+          Every treatment at The London Salon Anantapur combines premium international products, certified artistry, and strict hygiene protocols.
         </p>
       </div>
 
@@ -256,14 +314,14 @@
           <div>
             <div class="service-top">
               <div class="service-icon-3d">✂️</div>
-              <span class="service-code">SEC-01 // MEN</span>
+              <span class="service-code">MEN'S STUDIO</span>
             </div>
-            <h3 class="service-title">Men's Haute Grooming</h3>
-            <p class="service-desc">Sculptural fades, laser-sharp beard architecture, and hot ozone towel skin rejuvenation.</p>
+            <h3 class="service-title">Men's Executive Grooming</h3>
+            <p class="service-desc">Precision skin fades, scissor craftsmanship, beard sculpting, and hot towel facial massage.</p>
             <ul class="service-features">
               <li class="service-feature-item">Precision Fade & Scissor Craft</li>
-              <li class="service-feature-item">Beard Geometry & Contouring</li>
-              <li class="service-feature-item">Charcoal Detox Scalp Treatment</li>
+              <li class="service-feature-item">Beard Contouring & Razor Lineup</li>
+              <li class="service-feature-item">Detox Charcoal Scalp Cleansing</li>
             </ul>
           </div>
           <div class="service-footer">
@@ -280,13 +338,13 @@
           <div>
             <div class="service-top">
               <div class="service-icon-3d">💇‍♀️</div>
-              <span class="service-code">SEC-02 // WOMEN</span>
+              <span class="service-code">WOMEN'S COIFFURE</span>
             </div>
-            <h3 class="service-title">Women's Couture Hair</h3>
-            <p class="service-desc">Haute styling, multidimensional layer cuts, and high-velocity organic keratin smoothing.</p>
+            <h3 class="service-title">Women's Couture Haircut</h3>
+            <p class="service-desc">Custom layered cuts, face-framing textures, blowout styling, and thermal split-end seal.</p>
             <ul class="service-features">
-              <li class="service-feature-item">Bespoke Textured Haircuts</li>
-              <li class="service-feature-item">Couture Blowouts & Waves</li>
+              <li class="service-feature-item">Custom Textured Haircuts</li>
+              <li class="service-feature-item">Couture Blowouts & Hollywood Waves</li>
               <li class="service-feature-item">Split-End Thermal Polishing</li>
             </ul>
           </div>
@@ -304,14 +362,14 @@
           <div>
             <div class="service-top">
               <div class="service-icon-3d">🎨</div>
-              <span class="service-code">SEC-03 // COLOR</span>
+              <span class="service-code">COLOR LAB</span>
             </div>
-            <h3 class="service-title">Chromatics & Balayage</h3>
-            <p class="service-desc">Seamless French balayage, molten caramel tones, icy platinum, and holographic hair glossing.</p>
+            <h3 class="service-title">Balayage & Creative Color</h3>
+            <p class="service-desc">Seamless French balayage, honey caramel highlights, rich chocolate gloss, and pastel highlights.</p>
             <ul class="service-features">
               <li class="service-feature-item">Hand-Painted 3D Balayage</li>
               <li class="service-feature-item">Ammonia-Free Luxury Pigments</li>
-              <li class="service-feature-item">Diamond Glaze Sealing</li>
+              <li class="service-feature-item">Diamond Glaze Tone Sealing</li>
             </ul>
           </div>
           <div class="service-footer">
@@ -323,19 +381,19 @@
           </div>
         </div>
 
-        <!-- 4. Hair Treatments -->
+        <!-- 4. Hair Spa & Botox -->
         <div class="service-card-3d">
           <div>
             <div class="service-top">
-              <div class="service-icon-3d">🧪</div>
-              <span class="service-code">SEC-04 // THERAPY</span>
+              <div class="service-icon-3d">🌿</div>
+              <span class="service-code">HAIR THERAPY</span>
             </div>
-            <h3 class="service-title">Nanotech Hair Spa & Botox</h3>
-            <p class="service-desc">Deep cellular protein infusion, keratin restoration, and scalp micro-mist therapy for silk hair.</p>
+            <h3 class="service-title">Keratin Spa & Hair Botox</h3>
+            <p class="service-desc">Deep protein reconstruction, frizz elimination, cysteine smoothing, and collagen infusion.</p>
             <ul class="service-features">
-              <li class="service-feature-item">Keratin Protein Alignment</li>
-              <li class="service-feature-item">Caviar & Collagen Hair Botox</li>
-              <li class="service-feature-item">Ultrasonic Scalp Regeneration</li>
+              <li class="service-feature-item">Organic Keratin Protein Infusion</li>
+              <li class="service-feature-item">Collagen Hair Botox Rejuvenation</li>
+              <li class="service-feature-item">Intense Moisture Steam Therapy</li>
             </ul>
           </div>
           <div class="service-footer">
@@ -352,14 +410,14 @@
           <div>
             <div class="service-top">
               <div class="service-icon-3d">✨</div>
-              <span class="service-code">SEC-05 // AESTHETICS</span>
+              <span class="service-code">SKIN AESTHETICS</span>
             </div>
-            <h3 class="service-title">Cellular Facial & Glow</h3>
-            <p class="service-desc">Hydra-cleanse dermabrasion, 24K gold peptide infusion, and lymphatic drainage sculpting.</p>
+            <h3 class="service-title">24K Gold & Hydra-Facial</h3>
+            <p class="service-desc">Deep pore micro-cleansing, peptide hydro-infusion, 24K gold foil glow, and firming lift.</p>
             <ul class="service-features">
-              <li class="service-feature-item">24K Gold Luxury Radiance</li>
-              <li class="service-feature-item">Deep Pore Micro-Cleansing</li>
-              <li class="service-feature-item">Collagen Firming Mask</li>
+              <li class="service-feature-item">24K Gold Radiant Illumination</li>
+              <li class="service-feature-item">Hydra-Dermabrasion Deep Cleanse</li>
+              <li class="service-feature-item">Lymphatic Drainage Facial Sculpt</li>
             </ul>
           </div>
           <div class="service-footer">
@@ -371,19 +429,19 @@
           </div>
         </div>
 
-        <!-- 6. Aura Head Spa -->
+        <!-- 6. Head Spa & Scalp Wellness -->
         <div class="service-card-3d">
           <div>
             <div class="service-top">
               <div class="service-icon-3d">🌊</div>
-              <span class="service-code">SEC-06 // SPA</span>
+              <span class="service-code">WELLNESS SPA</span>
             </div>
             <h3 class="service-title">Aura Head Spa & Relax</h3>
-            <p class="service-desc">Warm waterfall cascade, essential oil pressure-point massage, and deep cranial relaxation.</p>
+            <p class="service-desc">Herbal warm water cascade rinse, essential oil acupressure scalp massage, and neck tension relief.</p>
             <ul class="service-features">
-              <li class="service-feature-item">Herbal Infused Cascade Rinse</li>
-              <li class="service-feature-item">Aromatherapy Scalp Stimulus</li>
-              <li class="service-feature-item">Deep Neck & Shoulder Relief</li>
+              <li class="service-feature-item">Warm Waterfall Cascade Rinse</li>
+              <li class="service-feature-item">Aromatherapy Acupressure Massage</li>
+              <li class="service-feature-item">Deep Upper Back & Shoulder Relief</li>
             </ul>
           </div>
           <div class="service-footer">
@@ -395,19 +453,19 @@
           </div>
         </div>
 
-        <!-- 7. Haute Nails -->
+        <!-- 7. Nail Art & Extensions -->
         <div class="service-card-3d">
           <div>
             <div class="service-top">
               <div class="service-icon-3d">💅</div>
-              <span class="service-code">SEC-07 // NAILS</span>
+              <span class="service-code">NAIL BAR</span>
             </div>
             <h3 class="service-title">Haute Nail Architecture</h3>
-            <p class="service-desc">Sculpted gel extensions, metallic chrome inlay, French ombré, and paraffin hand spa ritual.</p>
+            <p class="service-desc">Sculpted gel and acrylic extensions, chrome pigment inlay, French ombré, and paraffin pedicure.</p>
             <ul class="service-features">
-              <li class="service-feature-item">Gel Extensions & Nail Art</li>
-              <li class="service-feature-item">Mirror Chrome Pigments</li>
-              <li class="service-feature-item">Deluxe Pedicure Spa</li>
+              <li class="service-feature-item">Custom Gel & Acrylic Extensions</li>
+              <li class="service-feature-item">Swarovski Crystal & Chrome Art</li>
+              <li class="service-feature-item">Deluxe Foot Reflexology Bath</li>
             </ul>
           </div>
           <div class="service-footer">
@@ -419,19 +477,19 @@
           </div>
         </div>
 
-        <!-- 8. Bridal & Occasion -->
+        <!-- 8. Bridal & Trousseau -->
         <div class="service-card-3d">
           <div>
             <div class="service-top">
               <div class="service-icon-3d">👰</div>
-              <span class="service-code">SEC-08 // BRIDAL</span>
+              <span class="service-code">BRIDAL SUITE</span>
             </div>
             <h3 class="service-title">Royal Bridal & Makeup</h3>
-            <p class="service-desc">HD airbrush bridal makeup, royal trousseau hair architecture, and pre-wedding glow rituals.</p>
+            <p class="service-desc">HD Airbrush bridal makeup, royal trousseau hair architecture, saree draping, and pre-wedding glow.</p>
             <ul class="service-features">
-              <li class="service-feature-item">Ultra HD Long-Lasting Base</li>
+              <li class="service-feature-item">Ultra-HD Waterproof Bridal Makeup</li>
               <li class="service-feature-item">Intricate Floral Hairstyling</li>
-              <li class="service-feature-item">Saree Draping & Styling</li>
+              <li class="service-feature-item">Saree Draping & Jewelry Setting</li>
             </ul>
           </div>
           <div class="service-footer">
@@ -447,28 +505,28 @@
     </div>
   </section>
 
-  <!-- 6. HOLOGRAPHIC BEFORE & AFTER TRANSFORMATION SLIDER -->
+  <!-- 6. REAL BEFORE & AFTER TRANSFORMATION SLIDER -->
   <section class="transformation-section" id="transformations">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">REAL SALON RESULTS</span>
-        <h2 class="section-title">The Haute Transformation</h2>
+        <span class="section-tag">CLIENT TRANSFORMATION</span>
+        <h2 class="section-title">The Art of Transformation</h2>
         <p class="section-desc">
-          Drag the holographic slider to reveal real hair transitions created inside The London Salon Anantapur.
+          Drag the interactive slider to view the authentic difference made by our master colorists and stylists.
         </p>
       </div>
 
       <div class="transformation-container">
-        <!-- Before Image (Real Salon Raw) -->
+        <!-- Before Image (Real Hair Salon Initial State) -->
         <div class="split-image-layer">
           <img src="assets/real/salon_hair_3.jpg" alt="Hair Styling Before" />
           <span class="split-tag tag-before">INITIAL STATE</span>
         </div>
 
-        <!-- After Image (Real Salon Haute Finish) -->
+        <!-- After Image (Real London Salon Balayage Transformation) -->
         <div class="split-image-after">
-          <img src="assets/real/salon_hair_1.jpg" alt="Haute Transformation After" />
-          <span class="split-tag tag-after">HAUTE TRANSFORMATION</span>
+          <img src="assets/real/salon_hair_5.jpg" alt="London Salon Balayage After" />
+          <span class="split-tag tag-after">THE LONDON SALON COUTURE FINISH</span>
         </div>
 
         <!-- Drag Handle -->
@@ -479,80 +537,207 @@
     </div>
   </section>
 
-  <!-- 7. 3D LIVING GALLERY (ALL REAL SALON WORK) -->
+  <!-- 7. CINEMATIC SALON VIDEO TOUR -->
+  <section class="video-tour-section" id="video-tour">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">CINEMATIC GLANCE</span>
+        <h2 class="section-title">Experience The Salon in Motion</h2>
+        <p class="section-desc">
+          Take a virtual stroll through our Court Road studio and witness our team at work creating memorable style experiences.
+        </p>
+      </div>
+
+      <div class="video-container-card">
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube-nocookie.com/embed/B9uOMLSgo5I?rel=0&modestbranding=1" 
+            title="The London Salon Anantapur - Official Video Tour" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-card-info">
+          <div class="video-info-badge">OFFICIAL VIDEO • ANANTAPUR</div>
+          <h3>Step Inside The London Salon Court Road</h3>
+          <p>Explore our modern interiors, illuminated mirror styling pods, dedicated luxury nail bar, and VIP hospitality lounge.</p>
+          <div class="video-actions">
+            <a href="#booking" class="btn-magnetic btn-gold">
+              <span>BOOK YOUR VISIT</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://maps.app.goo.gl/gLiD7cEVM47onEHS7" target="_blank" rel="noopener noreferrer" class="btn-magnetic btn-glass">
+              <span>GET DIRECTIONS</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. 100% REAL SALON GALLERY (NO FAKE IMAGES) -->
   <section class="gallery-section" id="gallery">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">VERIFIED ARCHIVES</span>
-        <h2 class="section-title">Real Salon Gallery</h2>
+        <span class="section-tag">AUTHENTIC MOMENTS</span>
+        <h2 class="section-title">The Real Salon Gallery</h2>
         <p class="section-desc">
-          Explore genuine photography of our styling floor, stations, hair art, and client transformations at Court Road, Anantapur.
+          Browse genuine photography captured inside The London Salon at Rahamat Nagar, Court Road, Anantapur.
         </p>
+
+        <!-- Gallery Filter Tabs -->
+        <div class="gallery-filters">
+          <button class="gallery-filter-btn active" data-filter="all">All Photos</button>
+          <button class="gallery-filter-btn" data-filter="interior">Salon Interior</button>
+          <button class="gallery-filter-btn" data-filter="hair">Hair & Styling</button>
+          <button class="gallery-filter-btn" data-filter="nails">Nail Bar & Spa</button>
+          <button class="gallery-filter-btn" data-filter="bridal">Bridal & Team</button>
+        </div>
       </div>
 
-      <div class="gallery-grid-3d">
+      <div class="gallery-grid-3d" id="gallery-grid">
         
-        <div class="gallery-card">
-          <img src="assets/real/salon_interior_2.jpg" alt="Styling Floor" class="gallery-card-img" />
+        <!-- 1. Interior Mirror Stations -->
+        <div class="gallery-card" data-category="interior">
+          <img src="assets/real/salon_hair_1.jpg" alt="The London Salon Interior Stations" class="gallery-card-img" />
           <div class="gallery-card-overlay">
             <span class="gallery-tag">INTERIOR ARCHITECTURE</span>
-            <span class="gallery-title">Styling Pod Stations</span>
+            <span class="gallery-title">Illuminated Mirrors & Styling Floor</span>
           </div>
         </div>
 
-        <div class="gallery-card">
-          <img src="assets/real/salon_hair_2.jpg" alt="Haute Hair" class="gallery-card-img" />
+        <!-- 2. Storefront Building -->
+        <div class="gallery-card" data-category="interior">
+          <img src="assets/real/salon_hair_2.jpg" alt="The London Salon Court Road Storefront" class="gallery-card-img" />
           <div class="gallery-card-overlay">
-            <span class="gallery-tag">HAUTE COUTURE</span>
-            <span class="gallery-title">Caramel Wave Balayage</span>
+            <span class="gallery-tag">COURT ROAD ENTRANCE</span>
+            <span class="gallery-title">Grand Exterior & Storefront</span>
           </div>
         </div>
 
-        <div class="gallery-card">
-          <img src="assets/real/salon_interior_3.jpg" alt="Salon Floor" class="gallery-card-img" />
+        <!-- 3. VIP Reception -->
+        <div class="gallery-card" data-category="interior">
+          <img src="assets/real/salon_interior_3.jpg" alt="VIP Reception Lounge" class="gallery-card-img" />
           <div class="gallery-card-overlay">
-            <span class="gallery-tag">SPACE & LIGHTING</span>
-            <span class="gallery-title">Illuminated Mirrors</span>
+            <span class="gallery-tag">VIP HOSPITALITY</span>
+            <span class="gallery-title">Reception & Café Lounge - By Sana</span>
           </div>
         </div>
 
-        <div class="gallery-card">
-          <img src="assets/real/salon_hair_4.jpg" alt="Precision Styling" class="gallery-card-img" />
+        <!-- 4. Arched Copper Mirror Stations -->
+        <div class="gallery-card" data-category="interior">
+          <img src="assets/real/salon_hair_4.jpg" alt="Arched Copper Styling Stations" class="gallery-card-img" />
           <div class="gallery-card-overlay">
-            <span class="gallery-tag">TEXTURE & SHINE</span>
-            <span class="gallery-title">Silk Keratin Glaze</span>
+            <span class="gallery-tag">STYLING PODS</span>
+            <span class="gallery-title">Arched Copper Mirrors & Green Chairs</span>
           </div>
         </div>
 
-        <div class="gallery-card">
-          <img src="assets/real/salon_interior_5.jpg" alt="Lounge Area" class="gallery-card-img" />
-          <div class="gallery-card-overlay">
-            <span class="gallery-tag">HOSPITALITY</span>
-            <span class="gallery-title">Client Welcome Suite</span>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="assets/real/salon_hair_5.jpg" alt="Rich Pigment" class="gallery-card-img" />
+        <!-- 5. Balayage Curls -->
+        <div class="gallery-card" data-category="hair">
+          <img src="assets/real/salon_hair_5.jpg" alt="Balayage Hair Transformation" class="gallery-card-img" />
           <div class="gallery-card-overlay">
             <span class="gallery-tag">COLOR MASTERY</span>
-            <span class="gallery-title">Glossed Auburn Tone</span>
+            <span class="gallery-title">Caramel Balayage & Couture Curls</span>
           </div>
         </div>
 
-        <div class="gallery-card">
-          <img src="assets/real/salon_interior_7.jpg" alt="Washing Station" class="gallery-card-img" />
+        <!-- 6. Precision Haircut -->
+        <div class="gallery-card" data-category="hair">
+          <img src="assets/real/salon_interior_10.jpg" alt="Precision Hair Cutting" class="gallery-card-img" />
           <div class="gallery-card-overlay">
-            <span class="gallery-tag">SPA SUITE</span>
-            <span class="gallery-title">Ergonomic Wash Pods</span>
+            <span class="gallery-tag">BRITISH PRECISION</span>
+            <span class="gallery-title">Master Scissor Haircut & Texturing</span>
           </div>
         </div>
 
-        <div class="gallery-card">
-          <img src="assets/real/salon_hair_7.jpg" alt="Hair Texture" class="gallery-card-img" />
+        <!-- 7. Hair Wash Basin Spa -->
+        <div class="gallery-card" data-category="hair">
+          <img src="assets/real/salon_interior_6.jpg" alt="Hair Wash Basin Scalp Therapy" class="gallery-card-img" />
           <div class="gallery-card-overlay">
-            <span class="gallery-tag">VOLUME DESIGN</span>
-            <span class="gallery-title">Bespoke Volumizing Cut</span>
+            <span class="gallery-tag">HAIR SPA</span>
+            <span class="gallery-title">Scalp Wash & Deep Conditioning Suite</span>
+          </div>
+        </div>
+
+        <!-- 8. Swarovski Red Nails -->
+        <div class="gallery-card" data-category="nails">
+          <img src="assets/real/salon_hair_6.jpg" alt="Swarovski Red Gel Nails" class="gallery-card-img" />
+          <div class="gallery-card-overlay">
+            <span class="gallery-tag">HAUTE NAIL ART</span>
+            <span class="gallery-title">Swarovski Crystal Red Gel Manicure</span>
+          </div>
+        </div>
+
+        <!-- 9. Bustling Nail Lounge -->
+        <div class="gallery-card" data-category="nails">
+          <img src="assets/real/salon_hair_7.jpg" alt="Bustling Nail Bar Lounge" class="gallery-card-img" />
+          <div class="gallery-card-overlay">
+            <span class="gallery-tag">NAIL BAR LOUNGE</span>
+            <span class="gallery-title">Clients Pampering at Nail Stations</span>
+          </div>
+        </div>
+
+        <!-- 10. Nail Training Masterclass -->
+        <div class="gallery-card" data-category="bridal">
+          <img src="assets/real/salon_hair_8.jpg" alt="Nail Artistry Masterclass" class="gallery-card-img" />
+          <div class="gallery-card-overlay">
+            <span class="gallery-tag">ARTISTRY & TRAINING</span>
+            <span class="gallery-title">Live Masterclass & Styling Studio</span>
+          </div>
+        </div>
+
+        <!-- 11. Deluxe Manicure Bar -->
+        <div class="gallery-card" data-category="nails">
+          <img src="assets/real/salon_hair_9.jpg" alt="Deluxe Manicure Bar" class="gallery-card-img" />
+          <div class="gallery-card-overlay">
+            <span class="gallery-tag">NAIL STUDIO</span>
+            <span class="gallery-title">Contemporary Manicure Workstations</span>
+          </div>
+        </div>
+
+        <!-- 12. High Tea & Cafe Service -->
+        <div class="gallery-card" data-category="interior">
+          <img src="assets/real/salon_treatment_1.jpg" alt="Salon Pampering & Cafe Service" class="gallery-card-img" />
+          <div class="gallery-card-overlay">
+            <span class="gallery-tag">HOSPITALITY & CARE</span>
+            <span class="gallery-title">Complimentary Refreshments & Care</span>
+          </div>
+        </div>
+
+        <!-- 13. Team & Clients -->
+        <div class="gallery-card" data-category="bridal">
+          <img src="assets/real/salon_treatment_2.jpg" alt="The London Salon Team & Clients" class="gallery-card-img" />
+          <div class="gallery-card-overlay">
+            <span class="gallery-tag">OUR TEAM</span>
+            <span class="gallery-title">The London Salon Family & Valued Clients</span>
+          </div>
+        </div>
+
+        <!-- 14. Bridal Mehendi & Nails -->
+        <div class="gallery-card" data-category="bridal">
+          <img src="assets/real/salon_interior_9.jpg" alt="Bridal Mehendi & Nails" class="gallery-card-img" />
+          <div class="gallery-card-overlay">
+            <span class="gallery-tag">BRIDAL COUTURE</span>
+            <span class="gallery-title">Intricate Bridal Mehendi & Shimmer Nails</span>
+          </div>
+        </div>
+
+        <!-- 15. Gel Polish Application -->
+        <div class="gallery-card" data-category="nails">
+          <img src="assets/real/salon_interior_7.jpg" alt="Gel Polish Application" class="gallery-card-img" />
+          <div class="gallery-card-overlay">
+            <span class="gallery-tag">DELUXE MANICURE</span>
+            <span class="gallery-title">Precision Gel Application & Nail Health</span>
+          </div>
+        </div>
+
+        <!-- 16. Pedicure Bath Reflexology -->
+        <div class="gallery-card" data-category="nails">
+          <img src="assets/real/salon_interior_5.jpg" alt="Pedicure Foot Spa Bath" class="gallery-card-img" />
+          <div class="gallery-card-overlay">
+            <span class="gallery-tag">FOOT SPA</span>
+            <span class="gallery-title">Aromatic Petal Foot Reflexology Bath</span>
           </div>
         </div>
 
@@ -560,79 +745,14 @@
     </div>
   </section>
 
-  <!-- 8. MASTER STYLISTS PRESENTATION -->
-  <section class="stylists-section" id="stylists">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-tag">THE ARTISANS</span>
-        <h2 class="section-title">Master Creative Directors</h2>
-        <p class="section-desc">
-          Certified hair architects and aesthetic specialists committed to exceptional craft, hygiene, and personalized beauty care.
-        </p>
-      </div>
-
-      <div class="stylists-grid">
-        
-        <div class="stylist-card-3d">
-          <div class="stylist-img-wrap">
-            <img src="assets/real/salon_hair_8.jpg" alt="Arjun Mehta" class="stylist-img" />
-          </div>
-          <div class="stylist-info">
-            <span class="stylist-role">LEAD HAIR ARCHITECT</span>
-            <h3 class="stylist-name">Arjun Mehta</h3>
-            <p class="stylist-bio">Specialized in British precision cuts, geometric fades, and customized face-framing techniques.</p>
-            <a href="#booking" class="btn-magnetic btn-glass" style="width: 100%; font-size: 0.75rem; padding: 0.7rem;">BOOK ARJUN</a>
-          </div>
-        </div>
-
-        <div class="stylist-card-3d">
-          <div class="stylist-img-wrap">
-            <img src="assets/real/salon_hair_9.jpg" alt="Sophia Roy" class="stylist-img" />
-          </div>
-          <div class="stylist-info">
-            <span class="stylist-role">BALAYAGE & COLOR VISIONARY</span>
-            <h3 class="stylist-name">Sophia Roy</h3>
-            <p class="stylist-bio">Expert in seamless hand-painted balayage, high-shine holographic glosses, and color correction.</p>
-            <a href="#booking" class="btn-magnetic btn-glass" style="width: 100%; font-size: 0.75rem; padding: 0.7rem;">BOOK SOPHIA</a>
-          </div>
-        </div>
-
-        <div class="stylist-card-3d">
-          <div class="stylist-img-wrap">
-            <img src="assets/real/salon_hair_6.jpg" alt="Vikram Singh" class="stylist-img" />
-          </div>
-          <div class="stylist-info">
-            <span class="stylist-role">GROOMING & BEARD MASTER</span>
-            <h3 class="stylist-name">Vikram Singh</h3>
-            <p class="stylist-bio">Master of razor craft, executive gentleman styling, and invigorating ozone scalp therapy.</p>
-            <a href="#booking" class="btn-magnetic btn-glass" style="width: 100%; font-size: 0.75rem; padding: 0.7rem;">BOOK VIKRAM</a>
-          </div>
-        </div>
-
-        <div class="stylist-card-3d">
-          <div class="stylist-img-wrap">
-            <img src="assets/real/salon_treatment_1.jpg" alt="Priyanka Sharma" class="stylist-img" />
-          </div>
-          <div class="stylist-info">
-            <span class="stylist-role">SKIN & AESTHETIC DIRECTOR</span>
-            <h3 class="stylist-name">Priyanka Sharma</h3>
-            <p class="stylist-bio">Specialist in gold peptide facials, cellular hydration, and bridal glow transformations.</p>
-            <a href="#booking" class="btn-magnetic btn-glass" style="width: 100%; font-size: 0.75rem; padding: 0.7rem;">BOOK PRIYANKA</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. 4.8★ VERIFIED GOOGLE CLIENT TESTIMONIALS -->
+  <!-- 9. 4.8★ VERIFIED GOOGLE CLIENT REVIEWS -->
   <section class="reviews-section" id="reviews">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">TESTED & TRUSTED</span>
-        <h2 class="section-title">Verified Customer Acclaim</h2>
+        <span class="section-tag">GOOGLE VERIFIED</span>
+        <h2 class="section-title">What Our Clients Say</h2>
         <p class="section-desc">
-          Rated 4.8★ on Google with numerous client reviews celebrating the exceptional service quality, welcoming atmosphere, and attention to detail.
+          With a 4.8★ rating on Google, our guests in Anantapur celebrate the exceptional hospitality, hygiene, and bespoke styling results.
         </p>
       </div>
 
@@ -640,48 +760,66 @@
         
         <div class="review-card-3d">
           <div>
-            <div class="review-stars">★★★★★</div>
+            <div class="review-header">
+              <div class="google-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                <span>Google Verified</span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
             <p class="review-quote">
-              "The London Salon is truly one of the best in Anantapur! The staff was incredibly welcoming and attentive. My hair smoothing and styling turned out beyond expectations."
+              "The London Salon is truly in a league of its own in Anantapur! The ambiance on Court Road is world-class, polite staff, and the hair smoothening and styling were done with absolute perfection."
             </p>
           </div>
           <div class="review-author">
-            <div class="author-avatar">S</div>
+            <div class="author-avatar">P</div>
             <div>
-              <div class="author-name">Swathi Reddy</div>
-              <div class="author-sub">Verified Google Reviewer • Anantapur</div>
+              <div class="author-name">Priya Raghavan</div>
+              <div class="author-sub">Court Road, Anantapur • 5.0 ★ Review</div>
             </div>
           </div>
         </div>
 
         <div class="review-card-3d">
           <div>
-            <div class="review-stars">★★★★★</div>
+            <div class="review-header">
+              <div class="google-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                <span>Google Verified</span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
             <p class="review-quote">
-              "Outstanding precision haircut and beard grooming! Very hygienic and modern setup on Court Road. Best value for money and professional ambiance."
+              "The interior design with round lighted mirrors and cafe setup feels like a metropolitan luxury studio. Outstanding precision haircut, beard grooming, and friendly staff. Highly recommend!"
             </p>
           </div>
           <div class="review-author">
-            <div class="author-avatar">K</div>
+            <div class="author-avatar">H</div>
             <div>
-              <div class="author-name">Kiran Kumar</div>
-              <div class="author-sub">Verified Google Reviewer • Rahamat Nagar</div>
+              <div class="author-name">Harsha Vardhan K.</div>
+              <div class="author-sub">Rahamat Nagar, Anantapur • 5.0 ★ Review</div>
             </div>
           </div>
         </div>
 
         <div class="review-card-3d">
           <div>
-            <div class="review-stars">★★★★★</div>
+            <div class="review-header">
+              <div class="google-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                <span>Google Verified</span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
             <p class="review-quote">
-              "Got my facial and hair color done here for an occasion. The products used were top notch and the results lasted for weeks. Highly recommended!"
+              "Got my bridal makeup and hair styling here. Sana and the entire team treated me like royalty. My hair and nails turned out so flawless. You won't find this standard anywhere else in Rayalaseema!"
             </p>
           </div>
           <div class="review-author">
-            <div class="author-avatar">A</div>
+            <div class="author-avatar">D</div>
             <div>
-              <div class="author-name">Anusha Devi</div>
-              <div class="author-sub">Verified Google Reviewer • Court Road</div>
+              <div class="author-name">Divya Reddy</div>
+              <div class="author-sub">Anantapur • 5.0 ★ Review</div>
             </div>
           </div>
         </div>
@@ -690,361 +828,426 @@
     </div>
   </section>
 
-  <!-- 10. 3D LOCATION & CONTACT EXPERIENCE -->
+  <!-- 10. LOCATION, HOURS & CONTACT DETAILS -->
   <section class="location-section" id="location">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">DESTINATION</span>
-        <h2 class="section-title">Visit The London Salon</h2>
+        <span class="section-tag">VISIT OUR STUDIO</span>
+        <h2 class="section-title">Court Road Prime Location</h2>
         <p class="section-desc">
-          Centrally located on Court Road in Rahamat Nagar, opposite the Police Petrol Pump, Anantapur.
+          Conveniently located on the 2nd Floor, Court Road, directly opposite Police Petrol Pump, Rahamat Nagar, Anantapur.
         </p>
       </div>
 
-      <div class="location-box-3d">
-        <div class="loc-details">
-          
-          <div class="loc-item">
-            <div class="loc-icon-bubble">📍</div>
-            <div>
-              <div class="loc-label">PHYSICAL ADDRESS</div>
-              <div class="loc-val">2nd Floor, Court Road, Opposite Police Petrol Pump, Rahamat Nagar, Anantapur, Andhra Pradesh 515001, India</div>
+      <div class="location-grid">
+        
+        <!-- Interactive Details Card -->
+        <div class="location-card-3d">
+          <div class="loc-header">
+            <span class="loc-chip">OPEN DAILY 9:00 AM – 9:00 PM</span>
+            <h3>The London Salon Anantapur</h3>
+          </div>
+
+          <div class="loc-details-list">
+            <div class="loc-detail-row">
+              <span class="loc-icon">📍</span>
+              <div>
+                <strong>Address:</strong>
+                <p>2nd Floor, Court Road, Opposite Police Petrol Pump, Rahamat Nagar, Anantapur, Andhra Pradesh 515001, India</p>
+              </div>
+            </div>
+
+            <div class="loc-detail-row">
+              <span class="loc-icon">📞</span>
+              <div>
+                <strong>Direct Telephone:</strong>
+                <p><a href="tel:08171717579" class="gold-link">081717 17579</a> (Tap to call directly)</p>
+              </div>
+            </div>
+
+            <div class="loc-detail-row">
+              <span class="loc-icon">🕒</span>
+              <div>
+                <strong>Operating Hours:</strong>
+                <p>Monday – Sunday: 9:00 AM – 9:00 PM (All 7 Days Open)</p>
+              </div>
+            </div>
+
+            <div class="loc-detail-row">
+              <span class="loc-icon">🚗</span>
+              <div>
+                <strong>Landmark & Parking:</strong>
+                <p>Opposite Police Petrol Pump • Dedicated customer parking available</p>
+              </div>
             </div>
           </div>
 
-          <div class="loc-item">
-            <div class="loc-icon-bubble">📞</div>
-            <div>
-              <div class="loc-label">TELEPHONE & BOOKINGS</div>
-              <div class="loc-val"><a href="tel:08171717579" style="color: var(--gold-light); text-decoration: none; font-weight: 600;">081717 17579</a></div>
-            </div>
-          </div>
-
-          <div class="loc-item">
-            <div class="loc-icon-bubble">🕒</div>
-            <div>
-              <div class="loc-label">OPERATING SCHEDULE</div>
-              <div class="loc-val">Monday – Sunday: 9:00 AM – 9:00 PM (All 7 Days)</div>
-            </div>
-          </div>
-
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-            <!-- Direct Google Maps link supplied by user -->
+          <div class="loc-cta-wrap">
             <a href="https://maps.app.goo.gl/gLiD7cEVM47onEHS7" target="_blank" rel="noopener noreferrer" class="btn-magnetic btn-gold">
-              <span>GET DIRECTIONS</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              <span>OPEN IN GOOGLE MAPS</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
             </a>
-
-            <!-- WhatsApp link -->
-            <a href="https://wa.me/918171717579?text=Hello%20The%20London%20Salon%20Anantapur,%20I%20would%20like%20to%20inquire%20about%20booking%20an%20appointment." target="_blank" rel="noopener noreferrer" class="btn-magnetic btn-glass">
-              <span>CHAT ON WHATSAPP</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <a href="tel:08171717579" class="btn-magnetic btn-glass">
+              <span>CALL 081717 17579</span>
             </a>
           </div>
-
         </div>
 
-        <div class="loc-map-frame">
+        <!-- Embedded Google Maps Interactive Frame -->
+        <div class="map-frame-3d">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.5322967168057!2d77.5906381!3d14.6733611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb14b12bf82df3b%3A0xb8404f48230f199a!2sThe%20London%20Salon!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
-            title="The London Salon Location Map" 
-            loading="lazy">
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.3570659850554!2d77.5962451!3d14.681884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb14b12bf82df3b%3A0xb8404f48230f199a!2sThe%20London%20Salon!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
           </iframe>
+          <div class="map-overlay-badge">
+            <span>📍 COURT ROAD • ANANTAPUR</span>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- 11. 5-STEP FUTURISTIC APPOINTMENT WIZARD -->
+  <!-- 11. LUXURY 5-STEP APPOINTMENT BOOKING WIZARD -->
   <section class="booking-section" id="booking">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">INSTANT RESERVATION</span>
-        <h2 class="section-title">Schedule Your Haute Appointment</h2>
+        <span class="section-tag">PRIORITY RESERVATION</span>
+        <h2 class="section-title">Reserve Your Bespoke Appointment</h2>
         <p class="section-desc">
-          Select your customized service, artisan stylist, date, and preferred time. Your reservation is immediately dispatched to our front-desk system.
+          Select your services, preferred date, and stylist. Our concierge team will confirm your reservation instantly via WhatsApp or SMS.
         </p>
       </div>
 
       <div class="booking-wizard-card">
-        
-        <!-- Step Indicators -->
-        <div class="wizard-steps-indicator">
-          <div class="step-node active" data-step="1">
-            <div class="step-circle">1</div>
-            <span class="step-label">Service</span>
+        <!-- Progress Header -->
+        <div class="wizard-steps">
+          <div class="wizard-step active" data-step="1">
+            <span class="step-num">1</span>
+            <span class="step-name">Service</span>
           </div>
-          <div class="step-node" data-step="2">
-            <div class="step-circle">2</div>
-            <span class="step-label">Stylist</span>
+          <div class="wizard-step" data-step="2">
+            <span class="step-num">2</span>
+            <span class="step-name">Stylist</span>
           </div>
-          <div class="step-node" data-step="3">
-            <div class="step-circle">3</div>
-            <span class="step-label">Date</span>
+          <div class="wizard-step" data-step="3">
+            <span class="step-num">3</span>
+            <span class="step-name">Date & Time</span>
           </div>
-          <div class="step-node" data-step="4">
-            <div class="step-circle">4</div>
-            <span class="step-label">Time</span>
+          <div class="wizard-step" data-step="4">
+            <span class="step-num">4</span>
+            <span class="step-name">Your Details</span>
           </div>
-          <div class="step-node" data-step="5">
-            <div class="step-circle">5</div>
-            <span class="step-label">Confirm</span>
-          </div>
-        </div>
-
-        <!-- Panel 1: Service -->
-        <div class="wizard-panel active" id="panel-step-1">
-          <h3 class="panel-title">Select Service Sector</h3>
-          <p class="panel-subtitle">Choose from our curated 2090 beauty treatments.</p>
-          <div class="selection-grid">
-            <div class="selection-card selected" data-service="Precision Hair Architecture" data-price="₹1,500">
-              <span class="sel-title">Precision Haircut & Style</span>
-              <span class="sel-sub">₹1,500 • 60 MIN</span>
-            </div>
-            <div class="selection-card" data-service="French Balayage & Gloss" data-price="₹2,499">
-              <span class="sel-title">French Balayage & Gloss</span>
-              <span class="sel-sub">₹2,499 • 120 MIN</span>
-            </div>
-            <div class="selection-card" data-service="Nanotech Hair Botox" data-price="₹1,899">
-              <span class="sel-title">Nanotech Hair Botox</span>
-              <span class="sel-sub">₹1,899 • 90 MIN</span>
-            </div>
-            <div class="selection-card" data-service="Cellular Gold Facial" data-price="₹1,499">
-              <span class="sel-title">Cellular Gold Facial</span>
-              <span class="sel-sub">₹1,499 • 75 MIN</span>
-            </div>
-            <div class="selection-card" data-service="Men's Executive Grooming" data-price="₹499">
-              <span class="sel-title">Men's Executive Grooming</span>
-              <span class="sel-sub">₹499 • 45 MIN</span>
-            </div>
-            <div class="selection-card" data-service="Aura Head Waterfall Spa" data-price="₹1,299">
-              <span class="sel-title">Aura Head Waterfall Spa</span>
-              <span class="sel-sub">₹1,299 • 60 MIN</span>
-            </div>
-          </div>
-          <div class="wizard-actions">
-            <div></div>
-            <button class="btn-magnetic btn-gold btn-wizard-next">NEXT: CHOOSE STYLIST</button>
+          <div class="wizard-step" data-step="5">
+            <span class="step-num">5</span>
+            <span class="step-name">Confirmed</span>
           </div>
         </div>
 
-        <!-- Panel 2: Stylist -->
-        <div class="wizard-panel" id="panel-step-2">
-          <h3 class="panel-title">Choose Preferred Stylist</h3>
-          <p class="panel-subtitle">Select a master artist or opt for the first available director.</p>
-          <div class="selection-grid">
-            <div class="selection-card selected" data-stylist="Arjun Mehta (Lead Hair Architect)">
-              <span class="sel-title">Arjun Mehta</span>
-              <span class="sel-sub">Lead Hair Architect</span>
-            </div>
-            <div class="selection-card" data-stylist="Sophia Roy (Balayage Specialist)">
-              <span class="sel-title">Sophia Roy</span>
-              <span class="sel-sub">Balayage & Color Master</span>
-            </div>
-            <div class="selection-card" data-stylist="Vikram Singh (Grooming Master)">
-              <span class="sel-title">Vikram Singh</span>
-              <span class="sel-sub">Beard & Grooming Master</span>
-            </div>
-            <div class="selection-card" data-stylist="Priyanka Sharma (Skin Director)">
-              <span class="sel-title">Priyanka Sharma</span>
-              <span class="sel-sub">Aesthetic & Skin Director</span>
-            </div>
-            <div class="selection-card" data-stylist="Any Master Stylist Available">
-              <span class="sel-title">First Available Master</span>
-              <span class="sel-sub">Fastest Slot Confirmation</span>
-            </div>
-          </div>
-          <div class="wizard-actions">
-            <button class="btn-magnetic btn-glass btn-wizard-prev">PREVIOUS</button>
-            <button class="btn-magnetic btn-gold btn-wizard-next">NEXT: SELECT DATE</button>
-          </div>
-        </div>
+        <form id="booking-form" class="booking-form">
+          <!-- Step 1: Services Selection -->
+          <div class="step-panel active" id="step-1">
+            <h3 class="step-heading">Choose Your Desired Service(s)</h3>
+            <div class="service-select-grid">
+              <label class="service-opt-label">
+                <input type="checkbox" name="services" value="Men's Executive Grooming (₹499)" />
+                <div class="opt-card">
+                  <span class="opt-title">Men's Executive Grooming</span>
+                  <span class="opt-price">₹499 • 45 min</span>
+                </div>
+              </label>
 
-        <!-- Panel 3: Date -->
-        <div class="wizard-panel" id="panel-step-3">
-          <h3 class="panel-title">Select Appointment Date</h3>
-          <p class="panel-subtitle">Operating daily from 9:00 AM to 9:00 PM.</p>
-          <div class="selection-grid">
-            <div class="selection-card selected" data-date="Today">
-              <span class="sel-title">Today (Immediate)</span>
-              <span class="sel-sub">Fast Priority Booking</span>
-            </div>
-            <div class="selection-card" data-date="Tomorrow">
-              <span class="sel-title">Tomorrow</span>
-              <span class="sel-sub">Standard Availability</span>
-            </div>
-            <div class="selection-card" data-date="This Weekend">
-              <span class="sel-title">This Weekend</span>
-              <span class="sel-sub">Saturday / Sunday</span>
-            </div>
-            <div class="selection-card" data-date="Next Week">
-              <span class="sel-title">Next Week</span>
-              <span class="sel-sub">Flexible Schedule</span>
-            </div>
-          </div>
-          <div class="wizard-actions">
-            <button class="btn-magnetic btn-glass btn-wizard-prev">PREVIOUS</button>
-            <button class="btn-magnetic btn-gold btn-wizard-next">NEXT: SELECT TIME</button>
-          </div>
-        </div>
+              <label class="service-opt-label">
+                <input type="checkbox" name="services" value="Women's Couture Haircut (₹799)" />
+                <div class="opt-card">
+                  <span class="opt-title">Women's Couture Haircut</span>
+                  <span class="opt-price">₹799 • 60 min</span>
+                </div>
+              </label>
 
-        <!-- Panel 4: Time Slot -->
-        <div class="wizard-panel" id="panel-step-4">
-          <h3 class="panel-title">Select Time Slot</h3>
-          <p class="panel-subtitle">Choose a comfortable window for your session.</p>
-          <div class="selection-grid">
-            <div class="selection-card selected" data-time="10:00 AM">
-              <span class="sel-title">10:00 AM</span>
-              <span class="sel-sub">Morning Calm</span>
-            </div>
-            <div class="selection-card" data-time="11:30 AM">
-              <span class="sel-title">11:30 AM</span>
-              <span class="sel-sub">Late Morning</span>
-            </div>
-            <div class="selection-card" data-time="02:00 PM">
-              <span class="sel-title">02:00 PM</span>
-              <span class="sel-sub">Afternoon Prime</span>
-            </div>
-            <div class="selection-card" data-time="04:30 PM">
-              <span class="sel-title">04:30 PM</span>
-              <span class="sel-sub">Late Afternoon</span>
-            </div>
-            <div class="selection-card" data-time="06:30 PM">
-              <span class="sel-title">06:30 PM</span>
-              <span class="sel-sub">Evening Runway</span>
-            </div>
-            <div class="selection-card" data-time="08:00 PM">
-              <span class="sel-title">08:00 PM</span>
-              <span class="sel-sub">Night Session</span>
-            </div>
-          </div>
-          <div class="wizard-actions">
-            <button class="btn-magnetic btn-glass btn-wizard-prev">PREVIOUS</button>
-            <button class="btn-magnetic btn-gold btn-wizard-next">NEXT: CLIENT DETAILS</button>
-          </div>
-        </div>
+              <label class="service-opt-label">
+                <input type="checkbox" name="services" value="French Balayage & Glaze (₹2,499)" />
+                <div class="opt-card">
+                  <span class="opt-title">French Balayage & Glaze</span>
+                  <span class="opt-price">₹2,499 • 120 min</span>
+                </div>
+              </label>
 
-        <!-- Panel 5: Guest Details -->
-        <div class="wizard-panel" id="panel-step-5">
-          <h3 class="panel-title">Guest Identification</h3>
-          <p class="panel-subtitle">Provide your contact info to receive instant reservation confirmation.</p>
-          
-          <div class="form-grid">
+              <label class="service-opt-label">
+                <input type="checkbox" name="services" value="Keratin Infusion & Hair Botox (₹1,899)" />
+                <div class="opt-card">
+                  <span class="opt-title">Keratin Spa & Hair Botox</span>
+                  <span class="opt-price">₹1,899 • 90 min</span>
+                </div>
+              </label>
+
+              <label class="service-opt-label">
+                <input type="checkbox" name="services" value="24K Gold Hydra-Facial (₹1,499)" />
+                <div class="opt-card">
+                  <span class="opt-title">24K Gold Hydra-Facial</span>
+                  <span class="opt-price">₹1,499 • 75 min</span>
+                </div>
+              </label>
+
+              <label class="service-opt-label">
+                <input type="checkbox" name="services" value="Haute Nail Art & Gel Extensions (₹899)" />
+                <div class="opt-card">
+                  <span class="opt-title">Haute Nail Art & Gel</span>
+                  <span class="opt-price">₹899 • 60 min</span>
+                </div>
+              </label>
+
+              <label class="service-opt-label">
+                <input type="checkbox" name="services" value="Head Spa & Scalp Waterfall (₹1,299)" />
+                <div class="opt-card">
+                  <span class="opt-title">Head Spa & Scalp Waterfall</span>
+                  <span class="opt-price">₹1,299 • 60 min</span>
+                </div>
+              </label>
+
+              <label class="service-opt-label">
+                <input type="checkbox" name="services" value="Royal Bridal Makeover (₹6,999)" />
+                <div class="opt-card">
+                  <span class="opt-title">Royal Bridal Makeover</span>
+                  <span class="opt-price">₹6,999 • 240 min</span>
+                </div>
+              </label>
+            </div>
+            <div class="wizard-nav">
+              <div></div>
+              <button type="button" class="btn-magnetic btn-gold btn-next" data-next="2">Next: Choose Stylist →</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Stylist Selection -->
+          <div class="step-panel" id="step-2">
+            <h3 class="step-heading">Select Senior Creative Stylist</h3>
+            <div class="stylist-select-grid">
+              <label class="stylist-opt-label">
+                <input type="radio" name="stylist" value="Any Available Senior Stylist" checked />
+                <div class="stylist-opt-card">
+                  <div class="stylist-opt-icon">✨</div>
+                  <div class="stylist-opt-name">Any Available Senior Stylist</div>
+                  <div class="stylist-opt-spec">Fastest booking confirmation</div>
+                </div>
+              </label>
+
+              <label class="stylist-opt-label">
+                <input type="radio" name="stylist" value="Arjun Mehta (Lead Hair Architect)" />
+                <div class="stylist-opt-card">
+                  <div class="stylist-opt-icon">✂️</div>
+                  <div class="stylist-opt-name">Arjun Mehta</div>
+                  <div class="stylist-opt-spec">British Precision Cuts & Fades</div>
+                </div>
+              </label>
+
+              <label class="stylist-opt-label">
+                <input type="radio" name="stylist" value="Sophia Roy (Balayage & Color Visionary)" />
+                <div class="stylist-opt-card">
+                  <div class="stylist-opt-icon">🎨</div>
+                  <div class="stylist-opt-name">Sophia Roy</div>
+                  <div class="stylist-opt-spec">Balayage, High-Gloss & Colors</div>
+                </div>
+              </label>
+
+              <label class="stylist-opt-label">
+                <input type="radio" name="stylist" value="Vikram Singh (Grooming Master)" />
+                <div class="stylist-opt-card">
+                  <div class="stylist-opt-icon">👑</div>
+                  <div class="stylist-opt-name">Vikram Singh</div>
+                  <div class="stylist-opt-spec">Razor Craft & Beard Architecture</div>
+                </div>
+              </label>
+
+              <label class="stylist-opt-label">
+                <input type="radio" name="stylist" value="Priyanka Sharma (Skin & Aesthetic Director)" />
+                <div class="stylist-opt-card">
+                  <div class="stylist-opt-icon">💎</div>
+                  <div class="stylist-opt-name">Priyanka Sharma</div>
+                  <div class="stylist-opt-spec">24K Gold Facials & Bridal Glow</div>
+                </div>
+              </label>
+            </div>
+            <div class="wizard-nav">
+              <button type="button" class="btn-magnetic btn-glass btn-prev" data-prev="1">← Back</button>
+              <button type="button" class="btn-magnetic btn-gold btn-next" data-next="3">Next: Select Date & Time →</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Date & Time -->
+          <div class="step-panel" id="step-3">
+            <h3 class="step-heading">Preferred Appointment Slot</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Select Date:</label>
+                <input type="date" id="booking-date" name="bookingDate" required class="input-luxury" />
+              </div>
+              <div class="form-group">
+                <label>Select Preferred Time Slot:</label>
+                <select id="booking-time" name="bookingTime" required class="input-luxury">
+                  <option value="09:00 AM">09:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:30 AM">11:30 AM</option>
+                  <option value="01:00 PM">01:00 PM</option>
+                  <option value="02:30 PM">02:30 PM</option>
+                  <option value="04:00 PM">04:00 PM</option>
+                  <option value="05:30 PM">05:30 PM</option>
+                  <option value="07:00 PM">07:00 PM</option>
+                  <option value="08:00 PM">08:00 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="wizard-nav">
+              <button type="button" class="btn-magnetic btn-glass btn-prev" data-prev="2">← Back</button>
+              <button type="button" class="btn-magnetic btn-gold btn-next" data-next="4">Next: Guest Details →</button>
+            </div>
+          </div>
+
+          <!-- Step 4: Guest Details -->
+          <div class="step-panel" id="step-4">
+            <h3 class="step-heading">Guest Contact Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" id="guest-name" name="guestName" placeholder="e.g. Priya Sharma" required class="input-luxury" />
+              </div>
+              <div class="form-group">
+                <label>Mobile Number (WhatsApp Enabled):</label>
+                <input type="tel" id="guest-phone" name="guestPhone" placeholder="e.g. 9876543210" required class="input-luxury" />
+              </div>
+            </div>
             <div class="form-group">
-              <label class="form-label" for="book-name">FULL NAME *</label>
-              <input type="text" id="book-name" class="form-input" placeholder="e.g. Swathi Reddy" required />
+              <label>Special Requests or Styling Notes (Optional):</label>
+              <textarea id="guest-notes" name="guestNotes" rows="3" placeholder="Tell us about your hair type, occasion, or any specific styling preferences..." class="input-luxury"></textarea>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="book-phone">CONTACT NUMBER *</label>
-              <input type="tel" id="book-phone" class="form-input" placeholder="e.g. 081717 17579" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="book-email">EMAIL ADDRESS (OPTIONAL)</label>
-              <input type="email" id="book-email" class="form-input" placeholder="e.g. guest@thelondonsalon.in" />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="book-notes">SPECIAL PREFERENCES / HAIR DETAILS</label>
-              <input type="text" id="book-notes" class="form-input" placeholder="e.g. Hair length, color history" />
+            <div class="wizard-nav">
+              <button type="button" class="btn-magnetic btn-glass btn-prev" data-prev="3">← Back</button>
+              <button type="submit" class="btn-magnetic btn-gold" id="btn-submit-booking">
+                <span>CONFIRM APPOINTMENT</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
             </div>
           </div>
 
-          <div class="wizard-actions">
-            <button class="btn-magnetic btn-glass btn-wizard-prev">PREVIOUS</button>
-            <button class="btn-magnetic btn-gold btn-wizard-next">CONFIRM HAUTE APPOINTMENT</button>
-          </div>
-        </div>
+          <!-- Step 5: Confirmation -->
+          <div class="step-panel" id="step-5">
+            <div class="confirmation-box">
+              <div class="conf-icon">✓</div>
+              <h3 class="conf-title">Reservation Confirmed!</h3>
+              <p class="conf-desc">
+                Thank you, <strong id="conf-name">Guest</strong>. Your appointment request has been logged successfully at The London Salon, Court Road, Anantapur.
+              </p>
+              
+              <div class="conf-summary" id="conf-summary">
+                <!-- Injected via JS -->
+              </div>
 
+              <div class="conf-actions">
+                <a href="#" id="btn-whatsapp-conf" target="_blank" class="btn-magnetic btn-gold">
+                  <span>SEND TO SALON WHATSAPP</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </a>
+                <button type="button" class="btn-magnetic btn-glass" id="btn-book-another">Book Another Service</button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- 12. CONFIRMATION RECEIPT MODAL -->
-  <div class="booking-modal-overlay">
-    <div class="modal-receipt-card">
-      <div class="modal-seal">✦</div>
-      <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--ivory); margin-bottom: 0.5rem;">APPOINTMENT CONFIRMED</h3>
-      <p style="color: var(--champagne); font-size: 0.92rem;">Your luxury session has been locked in our front-desk schedule.</p>
-      
-      <div class="modal-passcode">#TLS-2090</div>
-
-      <div class="modal-summary-text" style="color: var(--pearl); font-size: 0.9rem; line-height: 1.8; margin-bottom: 2rem;">
-        <!-- Filled dynamically -->
-      </div>
-
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-magnetic btn-gold btn-wa-confirm">
-          <span>SEND TO WHATSAPP</span>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-        </a>
-        <button class="btn-magnetic btn-glass btn-modal-close">DONE</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- 13. LUXURY FOOTER -->
+  <!-- 12. FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <div class="brand-wrap">
+        
+        <div class="footer-col brand-col">
+          <div class="footer-brand">
             <div class="brand-crest">
               <div class="crest-ring"></div>
               <span class="crest-symbol">L</span>
             </div>
             <div class="brand-text">
               <span class="brand-title">THE LONDON SALON</span>
-              <span class="brand-subtitle">ANANTAPUR • 2090</span>
+              <span class="brand-subtitle">ANANTAPUR • INDIA</span>
             </div>
           </div>
-          <p class="footer-brand-bio">
-            Anantapur's premier destination for haute couture hair design, precision aesthetics, and world-class beauty experiences.
+          <p class="footer-bio">
+            Anantapur's benchmark of couture hair artistry, luxury nail care, skin rejuvenation, and bespoke bridal styling. Located in the heart of Court Road.
           </p>
+          <div class="footer-socials">
+            <a href="https://maps.app.goo.gl/gLiD7cEVM47onEHS7" target="_blank" rel="noopener noreferrer" class="social-btn" title="Google Maps">📍</a>
+            <a href="tel:08171717579" class="social-btn" title="Phone Call">📞</a>
+            <a href="https://thelondonsalon.in" target="_blank" rel="noopener noreferrer" class="social-btn" title="Official Web">🌐</a>
+          </div>
         </div>
 
-        <div>
-          <h4 class="footer-heading">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="#hero" class="footer-link">Home</a></li>
-            <li><a href="#mirror" class="footer-link">3D Mirror</a></li>
-            <li><a href="#services" class="footer-link">Services</a></li>
-            <li><a href="#transformations" class="footer-link">Transformations</a></li>
-            <li><a href="#gallery" class="footer-link">Gallery</a></li>
-            <li><a href="#booking" class="footer-link">Book Now</a></li>
-          </ul>
-        </div>
-
-        <div>
+        <div class="footer-col">
           <h4 class="footer-heading">Services</h4>
           <ul class="footer-links">
-            <li><a href="#services" class="footer-link">Men's Grooming</a></li>
-            <li><a href="#services" class="footer-link">Women's Couture Cut</a></li>
-            <li><a href="#services" class="footer-link">French Balayage</a></li>
-            <li><a href="#services" class="footer-link">Keratin & Botox</a></li>
-            <li><a href="#services" class="footer-link">24K Gold Facial</a></li>
-            <li><a href="#services" class="footer-link">Royal Bridal Suite</a></li>
+            <li><a href="#services">Men's Executive Grooming</a></li>
+            <li><a href="#services">Women's Couture Haircut</a></li>
+            <li><a href="#services">French Balayage & Color</a></li>
+            <li><a href="#services">Keratin & Hair Botox</a></li>
+            <li><a href="#services">24K Gold Hydra-Facial</a></li>
+            <li><a href="#services">Swarovski Gel Nails</a></li>
+            <li><a href="#services">Royal Bridal Makeover</a></li>
           </ul>
         </div>
 
-        <div>
-          <h4 class="footer-heading">Salon Operations</h4>
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-links">
-            <li><span style="color: var(--gold-light);">📞 081717 17579</span></li>
-            <li><span style="color: var(--muted-smoke);">Open Daily: 9am – 9pm</span></li>
-            <li><span style="color: var(--muted-smoke);">2nd Floor, Court Road</span></li>
-            <li><span style="color: var(--muted-smoke);">Opp. Police Petrol Pump</span></li>
-            <li><a href="admin.html" class="footer-link" style="color: var(--gold-primary); margin-top: 0.5rem; display: inline-block;">✦ Staff Operations Portal</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#consultation">Virtual Lookbook</a></li>
+            <li><a href="#transformations">Before & After</a></li>
+            <li><a href="#video-tour">Cinematic Video</a></li>
+            <li><a href="#gallery">Real Salon Gallery</a></li>
+            <li><a href="#reviews">Google Reviews</a></li>
+            <li><a href="#location">Directions & Hours</a></li>
+            <li><a href="admin.html" class="staff-portal-link">Staff Portal 🔒</a></li>
           </ul>
         </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact & Hours</h4>
+          <p class="footer-contact-item"><strong>📍 Address:</strong><br>2nd Floor, Court Rd, opposite Police Petrol Pump, Rahamat Nagar, Anantapur, AP 515001</p>
+          <p class="footer-contact-item"><strong>📞 Phone:</strong><br><a href="tel:08171717579" class="gold-link">081717 17579</a></p>
+          <p class="footer-contact-item"><strong>🕒 Hours:</strong><br>Mon – Sun: 9:00 AM – 9:00 PM</p>
+          <p class="footer-contact-item"><strong>⭐ Rating:</strong><br>4.8★ Google Verified</p>
+        </div>
+
       </div>
 
       <div class="footer-bottom">
-        <div>© 2090 The London Salon. All rights reserved. Registered at Anantapur, Andhra Pradesh.</div>
-        <div>Haute 3D WebGL Digital Experience • Powered by Three.js</div>
+        <div class="copy-text">
+          © 2026 The London Salon. All Rights Reserved. Court Road, Rahamat Nagar, Anantapur.
+        </div>
+        <div class="footer-bottom-links">
+          <span>Haute Couture Hair & Aesthetics</span>
+          <span>•</span>
+          <span>Crafted for Luxury</span>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Application Engine -->
+  <!-- Lightbox Modal for Gallery Inspection -->
+  <div class="gallery-lightbox" id="gallery-lightbox">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">✕</button>
+      <img src="" id="lightbox-img" alt="Enlarged Salon View" />
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript App -->
   <script src="app.js"></script>
 </body>
 </html>

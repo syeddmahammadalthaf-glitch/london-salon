@@ -91,11 +91,11 @@
   if (authBtn) {
     authBtn.addEventListener('click', () => {
       const val = authInput.value.trim().toLowerCase();
-      if (val === 'london2090' || val === 'admin123' || val === 'admin') {
+      if (val === 'londonsalon' || val === 'admin123' || val === 'admin') {
         sessionStorage.setItem('tls_admin_auth', 'true');
         authOverlay.style.display = 'none';
       } else {
-        alert('Invalid Passcode. Enter london2090 to access.');
+        alert('Invalid Passcode. Enter londonsalon to access.');
       }
     });
   }
