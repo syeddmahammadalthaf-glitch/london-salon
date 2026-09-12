@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Staff Operations Portal | The London Salon Anantapur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #07080b;
+      --surface: #0f1118;
+      --surface-elevated: #161922;
+      --border: rgba(212, 175, 55, 0.2);
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --gold: #d4af37;
+      --gold-light: #f7e7a9;
+      --ivory: #faf8f5;
+      --muted: #858997;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ivory);
+      font-family: 'Space Grotesk', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Passcode Gate */
+    #auth-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 8, 11, 0.95);
+      backdrop-filter: blur(25px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .auth-card {
+      background: var(--surface);
+      border: 1px solid var(--gold);
+      border-radius: 28px;
+      padding: 3rem 2.5rem;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 40px rgba(212,175,55,0.2);
+    }
+    .auth-title { font-family: 'Cinzel', serif; font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+    .auth-input {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      color: var(--ivory);
+      font-family: 'Space Mono', monospace;
+      font-size: 1.1rem;
+      text-align: center;
+      margin: 1.5rem 0 1rem;
+    }
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, #f7e7a9, #d4af37);
+      color: #050507;
+      border: none;
+      padding: 0.85rem;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    /* Admin Navbar */
+    .admin-nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-title { font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--gold-light); }
+    .nav-actions { display: flex; align-items: center; gap: 1rem; }
+    .btn-action {
+      background: rgba(212,175,55,0.1);
+      border: 1px solid var(--border);
+      color: var(--gold-light);
+      padding: 0.55rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .btn-action:hover { background: var(--gold); color: #050507; }
+
+    /* Dashboard Layout */
+    .admin-main {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2.5rem 2rem;
+      flex: 1;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .stat-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; font-family: 'Space Mono', monospace; }
+    .stat-value { font-size: 2rem; font-weight: 700; color: var(--gold-light); }
+
+    /* Controls Bar */
+    .controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .search-input {
+      background: var(--surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.75rem 1.25rem;
+      color: var(--ivory);
+      font-size: 0.9rem;
+      min-width: 300px;
+    }
+    .filter-tabs { display: flex; gap: 0.5rem; }
+    .filter-tab {
+      background: var(--surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--muted);
+      padding: 0.55rem 1.15rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      cursor: pointer;
+    }
+    .filter-tab.active { background: var(--gold); color: #050507; font-weight: 700; }
+
+    /* Table */
+    .table-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow-x: auto;
+    }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th {
+      padding: 1.1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.88rem;
+      color: var(--ivory);
+    }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+
+    .status-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      font-family: 'Space Mono', monospace;
+    }
+    .status-confirmed { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid var(--success); }
+    .status-pending { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid var(--warning); }
+    .status-completed { background: rgba(212, 175, 55, 0.15); color: var(--gold-light); border: 1px solid var(--gold); }
+    .status-cancelled { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid var(--danger); }
+
+    .btn-table-action {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--gold-light);
+      padding: 0.35rem 0.65rem;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      margin-right: 0.35rem;
+    }
+    .btn-table-action:hover { background: rgba(212,175,55,0.2); }
+  </style>
+</head>
+<body>
+
+  <!-- Passcode Gate -->
+  <div id="auth-overlay">
+    <div class="auth-card">
+      <div style="font-size: 2rem; margin-bottom: 1rem;">👑</div>
+      <h2 class="auth-title">THE LONDON SALON</h2>
+      <p style="color: var(--muted); font-size: 0.82rem;">Staff Operations & Appointment Control Portal</p>
+      <input type="password" id="auth-code" class="auth-input" placeholder="Passcode (london2090 or admin123)" />
+      <button class="btn-submit" id="btn-auth-login">ACCESS PORTAL</button>
+      <p style="color: var(--muted); font-size: 0.7rem; margin-top: 1rem;">Default Passcode: <strong>london2090</strong></p>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="admin-nav">
+    <div>
+      <div class="brand-title">THE LONDON SALON • OPERATIONS</div>
+      <div style="font-size: 0.72rem; color: var(--muted);">Court Road, Rahamat Nagar, Anantapur • Tel: 081717 17579</div>
+    </div>
+    <div class="nav-actions">
+      <a href="index.html" class="btn-action" target="_blank">View Live Website ↗</a>
+      <button class="btn-action" id="btn-add-walkin">+ Add Walk-In</button>
+      <button class="btn-action" id="btn-export">Export Data</button>
+      <button class="btn-action" id="btn-logout" style="border-color: var(--danger); color: var(--danger);">Lock</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="admin-main">
+    
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">Total Bookings</span>
+        <span class="stat-value" id="stat-total">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Confirmed Slots</span>
+        <span class="stat-value" id="stat-confirmed" style="color: var(--success);">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Completed</span>
+        <span class="stat-value" id="stat-completed" style="color: var(--gold);">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Projected Revenue</span>
+        <span class="stat-value" id="stat-revenue">₹0</span>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls-bar">
+      <input type="text" id="search-box" class="search-input" placeholder="Search by name, phone, service, or #TLS-ID..." />
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All (<span id="count-all">0</span>)</button>
+        <button class="filter-tab" data-filter="Confirmed">Confirmed</button>
+        <button class="filter-tab" data-filter="Completed">Completed</button>
+        <button class="filter-tab" data-filter="Cancelled">Cancelled</button>
+      </div>
+    </div>
+
+    <!-- Appointments Table -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Guest Name</th>
+            <th>Phone</th>
+            <th>Service Sector</th>
+            <th>Stylist</th>
+            <th>Schedule</th>
+            <th>Value</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="appointments-tbody">
+          <!-- Populated by admin.js -->
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
